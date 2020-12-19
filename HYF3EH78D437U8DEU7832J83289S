@@ -1,0 +1,222 @@
+local loader = {}
+
+function loader:New(name, options, callback)
+    callback = callback or function() end
+    local Loader = Instance.new("ScreenGui")
+    local Loader_2 = Instance.new("Frame")
+    local UIGradient = Instance.new("UIGradient")
+    local Decoration = Instance.new("Frame")
+    local Frame = Instance.new("Frame")
+    local Frame_2 = Instance.new("Frame")
+    local Frame_3 = Instance.new("Frame")
+    local UIGradient_2 = Instance.new("UIGradient")
+    local Frame_4 = Instance.new("Frame")
+    local Frame_5 = Instance.new("Frame")
+    local UIGradient_3 = Instance.new("UIGradient")
+    local Load = Instance.new("TextButton")
+    local Frame_6 = Instance.new("Frame")
+    local Frame_7 = Instance.new("Frame")
+    local Actions = Instance.new("Frame")
+    local UIListLayout = Instance.new("UIListLayout")
+    local UIPadding = Instance.new("UIPadding")
+    local UIGradient_4 = Instance.new("UIGradient")
+    local Original = Instance.new("TextButton")
+    local Title = Instance.new("TextLabel")
+
+    Loader.Name = "Loader"
+    Loader.Parent = game.CoreGui
+    Loader.ZIndexBehavior = Enum.ZIndexBehavior.Global
+    Loader.DisplayOrder = 999
+
+    Loader_2.Name = "Loader"
+    Loader_2.Parent = Loader
+    Loader_2.Active = true
+    Loader_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    Loader_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    Loader_2.Position = UDim2.new(0.5, -125, -0.5, -81)
+    Loader_2.Size = UDim2.new(0, 251, 0, 163)
+    Loader_2.Draggable = true
+
+    UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0, Color3.fromRGB(24, 24, 24)), ColorSequenceKeypoint.new(1, Color3.fromRGB(13, 13, 13))}
+    UIGradient.Rotation = 90
+    UIGradient.Parent = Loader_2
+
+    Decoration.Name = "Decoration"
+    Decoration.Parent = Loader_2
+    Decoration.BackgroundColor3 = Color3.fromRGB(255, 0, 245)
+    Decoration.BorderSizePixel = 0
+    Decoration.Position = UDim2.new(0, -1, 0, -1)
+    Decoration.Size = UDim2.new(1, 2, 0, 1)
+
+    Frame.Parent = Loader_2
+    Frame.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+    Frame.BorderSizePixel = 0
+    Frame.Position = UDim2.new(0, 2, 0, 4)
+    Frame.Size = UDim2.new(1, -4, 0, 156)
+
+    Frame_2.Parent = Frame
+    Frame_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+    Frame_2.BorderSizePixel = 0
+    Frame_2.Position = UDim2.new(0, 1, 0, 1)
+    Frame_2.Size = UDim2.new(1, -2, 1, -2)
+
+    Frame_3.Parent = Frame_2
+    Frame_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    Frame_3.BorderSizePixel = 0
+    Frame_3.Position = UDim2.new(0, 1, 0, 1)
+    Frame_3.Size = UDim2.new(1, -2, 1, -2)
+
+    UIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0, Color3.fromRGB(24, 24, 24)), ColorSequenceKeypoint.new(1, Color3.fromRGB(13, 13, 13))}
+    UIGradient_2.Rotation = 90
+    UIGradient_2.Parent = Frame_3
+
+    Frame_4.Parent = Frame_3
+    Frame_4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+    Frame_4.BorderSizePixel = 0
+    Frame_4.Position = UDim2.new(0, 2, 0, 18)
+    Frame_4.Size = UDim2.new(1, -4, 0.881578863, -2)
+
+    Frame_5.Parent = Frame_4
+    Frame_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    Frame_5.BorderSizePixel = 0
+    Frame_5.Position = UDim2.new(0, 1, 0, 1)
+    Frame_5.Size = UDim2.new(1, -2, 1, -2)
+
+    UIGradient_3.Color = ColorSequence.new{ColorSequenceKeypoint.new(0, Color3.fromRGB(24, 24, 24)), ColorSequenceKeypoint.new(1, Color3.fromRGB(13, 13, 13))}
+    UIGradient_3.Rotation = 90
+    UIGradient_3.Parent = Frame_5
+
+    Load.Name = "Load"
+    Load.Parent = Frame_5
+    Load.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+    Load.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    Load.Position = UDim2.new(0, 3, 0.805043042, 3)
+    Load.Size = UDim2.new(0, 231, 0, 19)
+    Load.AutoButtonColor = false
+    Load.Modal = true
+    Load.Font = Enum.Font.Nunito
+    Load.Text = "LOAD"
+    Load.TextColor3 = Color3.fromRGB(255, 255, 255)
+    Load.TextSize = 14.000
+    Load.TextStrokeTransparency = 0.000
+
+    Frame_6.Parent = Frame_5
+    Frame_6.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+    Frame_6.BorderSizePixel = 0
+    Frame_6.Position = UDim2.new(0, 2, 0, 2)
+    Frame_6.Size = UDim2.new(1, -4, 0.06923078, 90)
+
+    Frame_7.Parent = Frame_6
+    Frame_7.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+    Frame_7.BorderSizePixel = 0
+    Frame_7.Position = UDim2.new(0, 1, 0, 1)
+    Frame_7.Size = UDim2.new(1, -2, 1, -2)
+
+    Actions.Name = "Actions"
+    Actions.Parent = Frame_7
+    Actions.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    Actions.BorderSizePixel = 0
+    Actions.Position = UDim2.new(0, 1, 0, 1)
+    Actions.Size = UDim2.new(1, -2, 1, -2)
+
+    UIListLayout.Parent = Actions
+    UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+    UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+
+    UIPadding.Parent = Actions
+    UIPadding.PaddingTop = UDim.new(0, 3)
+
+    UIGradient_4.Color = ColorSequence.new{ColorSequenceKeypoint.new(0, Color3.fromRGB(24, 24, 24)), ColorSequenceKeypoint.new(1, Color3.fromRGB(13, 13, 13))}
+    UIGradient_4.Rotation = 90
+    UIGradient_4.Parent = Actions
+
+    Original.Name = "Original"
+    Original.Parent = Frame_7
+    Original.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+    Original.BackgroundTransparency = 1
+    Original.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    Original.Size = UDim2.new(1, 0, 0, 17)
+    Original.Visible = false
+    Original.AutoButtonColor = false
+    Original.Modal = true
+    Original.Font = Enum.Font.Code
+    Original.Text = "nil"
+    Original.TextColor3 = Color3.fromRGB(255, 255, 255)
+    Original.TextSize = 14
+    Original.TextStrokeTransparency = 0
+
+    Title.Name = "Title"
+    Title.Parent = Frame
+    Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    Title.BackgroundTransparency = 1
+    Title.Position = UDim2.new(0, 0, 0, 5)
+    Title.Size = UDim2.new(1, 0, 0, 12)
+    Title.Font = Enum.Font.Code
+    Title.Text = name
+    Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+    Title.TextSize = 14
+    Title.TextStrokeTransparency = 0
+
+    local gui = {}
+    local selected
+    local first = true
+    function gui:Option(text)
+        local clone = Original:Clone()
+        clone.Visible = true
+        clone.Parent = Actions
+        clone.Text = text
+        if first then
+            first = false
+            selected = text
+            clone.TextColor3 = Color3.fromRGB(255, 0, 245)
+        end
+        clone.MouseButton1Down:Connect(function()
+            selected = clone.Text
+            game:GetService("TweenService"):Create(clone, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = Color3.fromRGB(255, 0, 245)}):Play()
+            for _,obj in pairs(Actions:GetChildren()) do
+                if obj:IsA("TextButton") and selected ~= obj.Text then
+                    game:GetService("TweenService"):Create(obj, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = Color3.fromRGB(255, 255, 255)}):Play()
+                end
+            end
+        end)
+    end
+
+    for _,option in ipairs(options) do
+        gui:Option(option)
+    end
+    Load.MouseEnter:Connect(function()
+		game:GetService("TweenService"):Create(Load, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = Color3.fromRGB(255, 0, 245)}):Play()
+	end)
+	Load.MouseLeave:Connect(function()
+		game:GetService("TweenService"):Create(Load, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = Color3.fromRGB(255, 255, 255)}):Play()
+    end)
+    Load.MouseButton1Down:Connect(function()
+        local speed = 2
+        for _,obj in pairs(Loader:GetDescendants()) do
+            if obj:IsA("Frame") and obj.BackgroundTransparency ~= 1 then
+                game:GetService("TweenService"):Create(obj, TweenInfo.new(speed/10, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundTransparency = 1}):Play()
+            end
+            if obj:IsA("TextButton") or obj:IsA("TextLabel") then
+                if obj.BackgroundTransparency ~= 1 then
+                    game:GetService("TweenService"):Create(obj, TweenInfo.new(speed/10, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundTransparency = 1}):Play()
+                end
+                if obj.TextTransparency ~= 1 then
+                    game:GetService("TweenService"):Create(obj, TweenInfo.new(speed/10, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextTransparency = 1}):Play()
+                end
+                if obj.TextStrokeTransparency ~= 1 then
+                    game:GetService("TweenService"):Create(obj, TweenInfo.new(speed/10, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextStrokeTransparency = 1}):Play()
+                end
+            end
+        end
+        wait(speed/10)
+        Loader:Destroy()
+        callback(selected)
+    end)
+
+    wait(0.2)
+	Loader_2:TweenPosition(UDim2.new(0.5, -125, 0.5, -81), Enum.EasingDirection.Out, Enum.EasingStyle.Quad, 0.4)
+
+    return gui
+end
+
+return loader
